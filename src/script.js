@@ -1,16 +1,19 @@
-var file = require('fs')
+import inquirer from "inquirer";
 
-var qr = require('qr-image');
+var file = require("fs");
+var qr = require("qr-image");
+var crypto = require("crypto");
 
 function generateQR(url, name) {
-  
-  var qr_svg = qr.image(url, {type: 'svg'});
+  var qr_svg = qr.image(url, { type: "svg" });
 
   qr_svg.pipe(file.createWriteStream(`${name}.svg`));
 
-  var svg_string = qr.imageSync(name, {type:'svg'});
-
+  var svg_string = qr.imageSync(name, { type: "svg" });
 }
 
+function generateID() {
+  return crypto.randomBytes(16).toString("hex");
+}
 
-generateQR("www.google.com","Google");
+console.log(generateID());

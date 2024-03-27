@@ -1,23 +1,50 @@
 {
+
+  "type": "module",
+
   "name": "stupid-qrcode-generator",
+
   "version": "1.0.0",
+
   "description": "The stupid QR code generator is a tool that creates Quick Response (QR) codes, which are two-dimensional barcodes that can store data such as text, URLs, or other information.",
+
   "main": "./src/script.js",
+
   "scripts": {
+
     "test": "echo \"Error: no test specified\" && exit 1"
+
   },
+
   "repository": {
+
     "type": "git",
+
     "url": "git+https://github.com/liamstupidcodes/stupid-qrcode-generator.git"
+
   },
+
   "author": "Liam Arguedas",
+
   "license": "ISC",
+
   "bugs": {
+
     "url": "https://github.com/liamstupidcodes/stupid-qrcode-generator/issues"
+
   },
+
   "homepage": "https://github.com/liamstupidcodes/stupid-qrcode-generator#readme",
+
   "dependencies": {
+
+    "crypto": "^1.0.1",
+
     "inquirer": "^9.2.16",
+
     "qr-image": "^3.2.0"
+
   }
+
 }
+
